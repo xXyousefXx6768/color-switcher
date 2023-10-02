@@ -1,0 +1,84 @@
+*{
+    transition: all .3s linear;
+}
+
+:root{
+    --main-color:#0c00ec;
+}
+
+body{
+    display: flex;
+    background-color: var(--main-color);
+}
+.box{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 240px;
+    width: 412px;
+    background-color:#ffffff ;
+}
+h1{
+    font-size: 50px;
+    font-family:sans-serif;
+    color: var(--main-color);
+}
+.bar{
+    
+    left: -194px;
+    flex-direction: row-reverse;
+    justify-content: end;
+   align-items: center;
+    display: flex;
+    position: fixed;
+    height: 100px;
+    width: 237px; /* Increase the width of the parent div */
+    background-color: #ffffff;
+}
+
+.btnz {
+    
+    cursor: pointer;
+    opacity: .4;
+    width: 50px;
+    height: 50px;
+    border: solid rgba(0, 0, 0, 0) 2px;
+    display: inline-block;
+    border-radius: 40%;
+}
+#setting{
+    color: var(--main-color);
+    
+    cursor: pointer;
+    margin: 20px;
+}
+@keyframes rotate{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.toggle-active{
+      left: 0;
+}
+.animate{
+@keyframes rotate{
+
+    100%{
+        transform: rotate(0deg);
+    }
+} 
+}
+.color-active{
+    opacity: 1.4;
+}
+.stop{
+    animation-play-state: paused;
+}
+.start{
+    animation: rotate 1s linear infinite;
+    animation-play-state: running;
+}
